@@ -10,13 +10,18 @@ jobs:
           uses: actions/checkout@v6
 
         
-        - name: Welcome message
-          run: echo "Hello, this is my first Github Actions Job"
-
+        - name: List and Read file
+          run: |
+               echo "Hello, this is my first Github Actions Job"
+               ls -ltra
+               cat README.md
+     
+        - name: Generate ASCII Artwork
+          run: cowsay -f dragon "RUN MFS, Dragon never sleep so you shouldn't too" > dragon.txt
         
 
-        - name: List files
-          run : ls
+        # - name: List files
+        #   run : ls
 
-        - name: Read file
-          run : cat README.md
+        # - name: Read file
+        #   run : cat README.md

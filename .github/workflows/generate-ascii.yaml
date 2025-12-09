@@ -1,0 +1,26 @@
+name: Generate ASCII Artwork
+
+on: push   #[push,fork] we can use array for multiple values
+
+jobs:
+    first_job: 
+        runs-on: ubuntu-latest
+        steps: 
+        - name: Checkout Repo
+          uses: actions/checkout@v6
+
+        
+        - name: Install Cowsay program
+          run : sudo apt-get install cowsay -y
+
+        - name: Execute Cowsay CMD
+          run : cowsay -f dragon "RUN MFS, Dragon never sleep neither should you" > dragon.txt
+
+        - name: Test File exists
+          run: grep -i "dragon" dragon.txt
+
+        - name: Read File
+          run : cat dragon.txt
+
+        - name: Checkout repo Files
+          run: ls
