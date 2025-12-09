@@ -1,4 +1,4 @@
-name: My Firs Workflow
+name: My First Workflow
 
 on: push   #[push,fork] we can use array for multiple values
 
@@ -6,11 +6,11 @@ jobs:
     first_job: 
         runs-on: ubuntu-latest
         steps: 
-            - name: Welcome message
-              run: echo "Hello, this is my first Github Actions Job"
+        - name: Welcome message
+          run: echo "Hello, this is my first Github Actions Job"
 
-            - name: List files
-              run : ls
+        - name: List files
+          run : ls
 
-            - name: Read file
-              run : cat README.md
+        - name: Read file
+          run : cat README.md
