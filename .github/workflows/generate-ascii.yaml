@@ -7,7 +7,7 @@ jobs:
         runs-on: ubuntu-latest
         steps: 
         - name: Install Cowsay Program
-          uses: sudo apt-get install cowsay -y
+          run : sudo apt-get install cowsay -y
         - name: Execute the Cowsay CMD
           run : cowsay -f dragan "Run for life. (voosh.....fire incoming)" > dragon.txt
         
