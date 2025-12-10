@@ -9,7 +9,7 @@ jobs:
         - name: Install Cowsay Program
           run : sudo apt-get install cowsay -y
         - name: Execute the Cowsay CMD
-          run : cowsay -f dragan "Run for life. (voosh.....fire incoming)" > dragon.txt
+          run : cowsay -f dragon "Run for life. (voosh.....fire incoming)" > dragon.txt
         
         - name: Upload the Dragon Text File
           uses : actions/upload-artifact@v4
