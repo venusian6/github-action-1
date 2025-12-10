@@ -25,7 +25,7 @@ jobs:
            uses : actions/download-artifact@v5
            with:
              name: dragon-text-file
-             path: dragon.txt
+       
 
          - name: Test file exists
            run: grep -i "dragon" dragon.txt
@@ -38,9 +38,7 @@ jobs:
             uses : actions/download-artifact@v5
             with:
               name: dragon-text-file
-              path: dragon.txt
-
-
+       
           - name: Read file
             run: cat dragon.txt
 
