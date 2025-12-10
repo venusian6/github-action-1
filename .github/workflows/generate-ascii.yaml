@@ -10,17 +10,11 @@ jobs:
           uses: actions/checkout@v6
 
         
-        - name: Install Cowsay program
-          run : sudo apt-get install cowsay -y
+        - name: List Repo Files
+          run : ls -ltra
 
-        - name: Execute Cowsay CMD
-          run : cowsay -f dragon "RUN MFS, Dragon never sleep neither should you" > dragon.txt
-
-        - name: Test File exists
-          run: grep -i "dragon" dragon.txt
-
-        - name: Read File
-          run : cat dragon.txt
-
-        - name: Checkout repo Files
-          run: ls
+        
+        - name: Executing Shell Script
+          run : |
+                chmod +x ascii-script.sh
+                ./ascii-script.sh
