@@ -25,10 +25,10 @@ jobs:
            uses : actions/download-artifact@v5
            with:
              name: dragon-text-file
-             path: .
+            
              
          - name: Test file exists
-           run: grep -i "dragon" dragon.txt
+           run: grep -i "voosh" dragon.txt
 
     third_deploy_job: 
           needs: second_test_job   # We can provide the multiple jobs need in array form also [job1, job2] 
