@@ -25,6 +25,7 @@ jobs:
            uses : actions/download-artifact@v5
            with:
              name: dragon-text-file
+             path: .
        
 
          - name: Test file exists
